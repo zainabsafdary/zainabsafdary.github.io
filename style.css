@@ -1,0 +1,748 @@
+
+/* ==========================================
+   ZAINAB SAFDARY — PERSONAL WEBSITE
+   ========================================== */
+
+/* ---------- DESIGN SYSTEM ---------- */
+
+:root {
+    --bg: #f7f7f3;
+    --text: #1d1d1b;
+    --muted: #666;
+    --subtle: #888;
+    --accent: #b8860b;
+    --border: #deded8;
+
+    --page-width: 820px;
+    --content-width: 700px;
+    --narrow-width: 600px;
+
+    --body-size: 1.05rem;
+    --body-leading: 1.7;
+
+    --space-sm: 12px;
+    --space-md: 20px;
+    --space-lg: 30px;
+    --space-xl: 48px;
+    --space-2xl: 65px;
+}
+
+/* ---------- RESET ---------- */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
+
+img {
+    max-width: 100%;
+}
+
+a {
+    transition: color 0.15s ease,
+                opacity 0.15s ease;
+}
+
+a:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 4px;
+}
+
+/* ---------- PAGE LAYOUT ---------- */
+
+.page {
+    width: 100%;
+    max-width: var(--page-width);
+    margin: 0 auto;
+    padding: 64px 28px 90px;
+}
+
+/* ---------- HEADER ---------- */
+
+.site-header {
+    width: 100%;
+    margin-bottom: 48px;
+}
+
+.site-header h1 {
+    margin: 0 0 24px;
+    font-size: clamp(2.8rem, 7vw, 5rem);
+    font-weight: 500;
+    line-height: 1.08;
+    letter-spacing: -0.04em;
+}
+
+/* ---------- NAVIGATION ---------- */
+
+.site-header nav {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-start;
+    column-gap: 52px;
+    row-gap: 14px;
+}
+
+.site-header nav a {
+    color: var(--accent);
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.5;
+    text-decoration: none;
+}
+
+.site-header nav a:hover,
+.site-header nav a:focus-visible {
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
+/* ---------- SHARED TYPOGRAPHY ---------- */
+
+.intro p,
+.finds-intro,
+.life-intro p,
+.projects-introduction p,
+.project-description p {
+    font-size: var(--body-size);
+    line-height: var(--body-leading);
+    font-weight: 400;
+}
+
+.pronunciation {
+    color: var(--muted);
+}
+
+/* ---------- HOME ---------- */
+
+.intro {
+    width: 100%;
+    max-width: var(--content-width);
+}
+
+.intro p {
+    margin: 0 0 24px;
+}
+
+.intro p:last-child {
+    margin-bottom: 0;
+}
+
+/* ---------- CONTACT ---------- */
+
+.contact {
+    margin-top: 80px;
+    text-align: center;
+}
+
+.contact-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 8px 18px;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.contact-links a {
+    color: var(--text);
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
+.contact-links a:hover {
+    opacity: 0.6;
+}
+
+.contact-gif {
+    display: block;
+    width: 220px;
+    height: auto;
+    margin: 12px auto 0;
+}
+
+/* ==========================================
+   NOTES & FINDS
+   ========================================== */
+
+.finds-intro {
+    width: 100%;
+    max-width: var(--content-width);
+    margin: 0 0 48px;
+}
+
+.finds-section {
+    width: 100%;
+    max-width: var(--narrow-width);
+    margin: 0 auto 65px;
+}
+
+.finds-section h2 {
+    margin: 0 0 28px;
+    color: var(--accent);
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.4;
+}
+
+/* Three-column gallery */
+
+.finds-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    column-gap: 30px;
+    row-gap: 48px;
+}
+
+/* Individual item */
+
+.find-card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    min-width: 0;
+}
+
+.find-card img {
+    display: block;
+    margin: 0 0 10px;
+}
+
+/* Music */
+
+.album-cover {
+    width: 135px;
+    height: 135px;
+    object-fit: cover;
+}
+
+/* Films and books */
+
+.poster-cover,
+.book-cover {
+    width: 110px;
+    height: 165px;
+    object-fit: cover;
+}
+
+/* Item title */
+
+.find-card h3 {
+    max-width: 170px;
+    margin: 0;
+    color: var(--text);
+    font-size: 0.95rem;
+    line-height: 1.35;
+    font-weight: 600;
+}
+
+/* Artist, author, director, year */
+
+.find-card p {
+    max-width: 170px;
+    margin: 5px 0 0;
+    color: var(--muted);
+    font-size: 0.82rem;
+    line-height: 1.45;
+}
+
+/* ==========================================
+   LIFE, ETC.
+   ========================================== */
+
+.life-intro,
+.life-feed {
+    width: 100%;
+    max-width: var(--content-width);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.life-intro {
+    margin-bottom: 48px;
+}
+
+.life-intro h2 {
+    display: none;
+}
+
+.life-intro p {
+    margin: 0;
+}
+
+/* Entries */
+
+.life-entry {
+    margin-bottom: 48px;
+}
+
+.life-photo {
+    display: block;
+    width: auto;
+    max-width: min(100%, 430px);
+    max-height: 480px;
+    height: auto;
+    margin: 18px auto;
+}
+
+.life-text {
+    width: 100%;
+    max-width: 430px;
+    margin: 0 auto;
+}
+
+/* Metadata */
+
+.life-meta {
+    margin: 0 0 8px;
+    color: var(--subtle);
+    font-size: 0.78rem;
+    line-height: 1.4;
+}
+
+/* Entry title */
+
+.life-text h3 {
+    margin: 0 0 10px;
+    color: var(--accent);
+    font-size: 1rem;
+    line-height: 1.4;
+    font-weight: 500;
+}
+
+/* Description */
+
+.life-text p:not(.life-meta) {
+    margin: 0;
+    color: #555;
+    font-size: 0.9rem;
+    line-height: 1.65;
+}
+
+/* ==========================================
+   PROJECTS — ACADEMIC INDEX
+   ========================================== */
+
+.projects-page {
+    width: 100%;
+    max-width: var(--content-width);
+    margin: 0 auto;
+}
+
+/* Hide old page title if present */
+
+.projects-page > h2 {
+    display: none;
+}
+
+/* Introduction */
+
+.projects-introduction {
+    width: 100%;
+    margin: 0 0 60px;
+}
+
+.projects-introduction p {
+    margin: 0 0 20px;
+}
+
+.projects-introduction p:last-child {
+    margin-bottom: 0;
+}
+
+/* Research areas */
+
+.research-category {
+    margin-bottom: 65px;
+}
+
+.research-category:last-child {
+    margin-bottom: 0;
+}
+
+.research-category h2 {
+    margin: 0 0 18px;
+    color: var(--accent);
+    font-size: 1.2rem;
+    line-height: 1.4;
+    font-weight: 500;
+    letter-spacing: -0.01em;
+}
+
+.research-description {
+    margin: 0 0 24px;
+    color: #444;
+    font-size: 1rem;
+    line-height: 1.7;
+}
+
+/* Academic bibliography-style list */
+
+.research-list {
+    margin: 0;
+    padding-left: 24px;
+    list-style-type: disc;
+}
+
+.research-list li {
+    padding-left: 4px;
+    margin-bottom: 20px;
+    color: var(--text);
+    font-size: 1rem;
+    line-height: 1.65;
+}
+
+.research-list li:last-child {
+    margin-bottom: 0;
+}
+
+.research-list a {
+    color: #1d1d1b;
+    font-weight: 600;
+    text-decoration: underline;
+    text-decoration-color: #bdbdb6;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
+}
+
+.research-list a:hover {
+    color: #b8860b;
+    text-decoration-color: #b8860b;
+}
+
+.research-meta {
+    color: var(--muted);
+    font-size: 0.95rem;
+}
+
+.research-meta em {
+    font-style: italic;
+}
+
+/* ==========================================
+   INDIVIDUAL PROJECT PAGES
+   ========================================== */
+
+.project-page {
+    width: 100%;
+    max-width: var(--content-width);
+    margin: 0 auto;
+}
+
+/* Back navigation */
+
+.back-link {
+    display: inline-block;
+    margin: 0 0 35px;
+    color: var(--accent);
+    font-size: 0.9rem;
+    text-decoration: none;
+}
+
+.back-link:hover {
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
+/* Title */
+
+.project-page h2 {
+    margin: 0 0 12px;
+    font-size: clamp(1.6rem, 4vw, 2rem);
+    line-height: 1.25;
+    font-weight: 500;
+    letter-spacing: -0.02em;
+}
+
+/* Subtitle */
+
+.project-subtitle {
+    margin: 0 0 35px;
+    color: var(--muted);
+    font-size: 1rem;
+    line-height: 1.6;
+    font-style: italic;
+}
+
+/* Text blocks */
+
+.project-description {
+    width: 100%;
+    margin: 0 0 30px;
+}
+
+.project-description p {
+    margin: 0;
+}
+
+.project-description p + p {
+    margin-top: 18px;
+}
+
+/* Graphs */
+
+.project-graph {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin: 0 0 30px;
+    cursor: zoom-in;
+    transition: opacity 0.15s ease;
+}
+
+.project-graph:hover {
+    opacity: 0.92;
+}
+
+.graph-note {
+    margin: 8px 0 30px;
+    color: var(--subtle);
+    font-size: 0.78rem;
+    line-height: 1.5;
+    text-align: center;
+}
+
+/* Source code link */
+
+.project-code {
+    margin: 35px 0 0;
+    color: var(--text);
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.project-code a {
+    color: var(--accent);
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.project-code a:hover {
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
+/* Graph lightbox */
+
+.graph-lightbox {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    padding: 30px;
+    background: rgba(0, 0, 0, 0.88);
+    align-items: center;
+    justify-content: center;
+    cursor: zoom-out;
+}
+
+.graph-full {
+    display: block;
+    max-width: 95vw;
+    max-height: 92vh;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+}
+
+.graph-close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: white;
+    font-size: 2.5rem;
+    font-weight: 300;
+    cursor: pointer;
+}
+
+/* ==========================================
+   RESPONSIVE DESIGN
+   ========================================== */
+
+/* Tablets */
+
+@media (max-width: 768px) {
+
+    .page {
+        padding: 48px 26px 75px;
+    }
+
+    .site-header {
+        margin-bottom: 40px;
+    }
+
+    .site-header nav {
+        column-gap: 30px;
+    }
+
+    .projects-introduction {
+        margin-bottom: 50px;
+    }
+
+    .research-category {
+        margin-bottom: 55px;
+    }
+}
+
+/* Phones */
+
+@media (max-width: 600px) {
+
+    .page {
+        padding: 32px 20px 60px;
+    }
+
+    .site-header {
+        margin-bottom: 36px;
+    }
+
+    .site-header h1 {
+        font-size: clamp(2.4rem, 10vw, 3.5rem);
+        margin-bottom: 22px;
+    }
+
+    .site-header nav {
+        column-gap: 20px;
+        row-gap: 12px;
+    }
+
+    .site-header nav a {
+        font-size: 0.95rem;
+    }
+
+    /* Shared body text */
+
+    .intro p,
+    .finds-intro,
+    .life-intro p,
+    .projects-introduction p,
+    .project-description p {
+        font-size: 1rem;
+        line-height: 1.7;
+    }
+
+    /* Notes & Finds */
+
+    .finds-grid {
+        grid-template-columns: 1fr;
+        row-gap: 35px;
+    }
+
+    .finds-section {
+        margin-bottom: 50px;
+    }
+
+    .find-card h3,
+    .find-card p {
+        max-width: 100%;
+    }
+
+    /* Life */
+
+    .life-intro {
+        margin-bottom: 40px;
+    }
+
+    .life-entry {
+        margin-bottom: 50px;
+    }
+
+    .life-photo,
+    .life-text {
+        max-width: 100%;
+    }
+
+    /* Projects */
+
+    .projects-introduction {
+        margin-bottom: 45px;
+    }
+
+    .research-category {
+        margin-bottom: 45px;
+    }
+
+    .research-category h2 {
+        font-size: 1.15rem;
+    }
+
+    .research-description {
+        font-size: 0.98rem;
+    }
+
+    .research-list li {
+        font-size: 0.95rem;
+        margin-bottom: 18px;
+    }
+
+    /* Individual projects */
+
+    .back-link {
+        margin-bottom: 28px;
+    }
+
+    .project-subtitle {
+        margin-bottom: 28px;
+    }
+
+    .project-description,
+    .project-graph {
+        margin-bottom: 26px;
+    }
+
+    /* Contact */
+
+    .contact {
+        margin-top: 65px;
+    }
+
+    .contact-gif {
+        width: 190px;
+    }
+}
+
+/* Small phones */
+
+@media (max-width: 380px) {
+
+    .site-header nav {
+        column-gap: 15px;
+    }
+
+    .site-header nav a {
+        font-size: 0.9rem;
+    }
+
+    .page {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+}
+
+/* Reduced motion */
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+
+    a,
+    .project-graph {
+        transition: none;
+    }
+}

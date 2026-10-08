@@ -1,0 +1,203 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Heterogeneity in Buy Now, Pay Later Adoption and Repayment: The Role of Liquidity Constraints and Behavioral Biases.| Zainab Safdary</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="page">
+
+        <header class="site-header">
+            <h1>Zainab Safdary</h1>
+
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="projects.html">Projects</a>
+                <a href="notes.html">Notes & Finds</a>
+                <a href="life.html">Life, etc.</a>
+            </nav>
+        </header>
+
+
+        <article class="project-page">
+
+            <a href="projects.html" class="back-link">← Projects</a>
+
+            <h2>Heterogeneity in Buy Now, Pay Later Adoption and Repayment: The Role of Liquidity Constraints and Behavioral Biases.</h2>
+
+            <p class="project-subtitle">
+             Three Borrower Types and a Fourfold Gap in Late Payment. 
+            </p>
+
+            <div class="project-description">
+                <p>
+                   In March 2025, DoorDash announced that customers could split a food delivery order into four interest-free payments through Klarna, or push the payment back to payday. The idea of financing a burrito drew ridicule online, but it reflected a real shift: buy now, pay later (BNPL) has moved from sneakers and sofas into everyday spending. In the Federal Reserve's 2025 
+                  <a href="https://www.federalreserve.gov/consumerscommunities/shed.htm" target="_blank" rel="noopener noreferrer">
+                   Survey of Household Economics and Decisionmaking (SHED),
+                  </a> one in five BNPL users said they had used it for groceries or food delivery. </p>
+                    
+                  <p>
+                   The Fed estimates that 16 percent of U.S. adults used BNPL in the year to October 2025, up from 10 percent in 2021, and that about a quarter of users made a late payment. Two stories compete to explain those numbers. In one, BNPL is a lifeline: interest-free credit for households with no savings and few alternatives. In the other, it is a behavioral trap: splitting a price into four small payments makes a purchase feel cheaper than it is, and people who could have paid upfront overcommit.
+                  </p>
+
+                <p>
+                    Both stories surely describe someone. I wanted to know how many users fit each, and which of them end up paying late. Using the SHED microdata on 12,934 adults, 2,004 of whom used BNPL, I estimated the hidden types of BNPL users directly from their answers.
+                </p>
+                
+            </div>
+
+        <div class="project-description">
+                <p>
+                 At first look, BNPL users have far less of a cushion than everyone else. Only 35 percent could cover a $400 emergency with cash or its equivalent, compared with 69 percent of adults who did not use BNPL. Their stated reasons also line up with repayment: among users who said BNPL was the only way they could afford a purchase or their only payment option, 42 percent paid late, against 16 percent of those who used it to avoid interest charges.
+                </p>
+        </div>
+
+        <img
+            src="images/project4.1.png"
+            alt="late-payment rate by main reason for using BNPL"
+            class="project-graph"
+            onclick="openGraph()"
+            >
+
+        <div class="project-description">
+                <p>A single survey answer is a thin basis for sorting people, though. Someone who chose BNPL to spread out payments might have plenty in savings or nothing at all. Financial situations come in bundles, with savings, credit card habits, income stability and financial stress moving together, so I needed a method that reads all of the answers at once.</p>
+    
+        </div>
+
+
+        <div class="project-description">
+                <p>Instead of sorting users by categories I chose in advance, I estimated a latent class model. It assumes each user belongs to one of a small number of unobserved types, and that each type has its own typical pattern of answers. The model uses seven of them: whether the person could cover $400 in cash, whether they had three months of emergency savings, how often they carry a credit card balance, how much their income varies month to month, how they rate their own finances, their main reason for using BNPL, and their willingness to take financial risks.
+                </p>
+
+        
+    
+                <p>I estimated the model by maximum likelihood with an expectation-maximization (EM) algorithm that I wrote in Python, using the survey weights so results represent U.S. adults. Late payment is deliberately left out of the classification: the types are defined by who people are, and only afterward compared on how they repaid. The Bayesian information criterion selects three types, and all 30 random starting points converge to the same solution.
+                </p>
+         </div>
+
+            <img
+            src="images/project4.2.png"
+            alt="answer profiles of the three types"
+            class="project-graph"
+            onclick="openGraph()"
+            >
+        <div class="project-description">
+
+        <p>The three types differ sharply in both their finances and how often they paid late.
+                </p>
+        </div>
+
+
+        <img
+            src="images/project4.3.png"
+            alt="answer profiles of the three types"
+            class="project-graph"
+            onclick="openGraph()"
+            >
+        <div class="project-description">
+
+        <p>Late payment is concentrated. Constrained borrowers are just over a third of users but account for 56 percent of those who paid late, while cushioned users account for under 8 percent. The pattern holds when I drop respondents who rushed through the survey and those whose answers were filled in by imputation: the same three types appear, with late-payment rates within one percentage point of the estimates above.
+                </p>
+        </div>
+
+
+        <div class="project-description">
+
+        <p>
+            The lifeline story fits the constrained borrowers. For them, BNPL stands in for credit they otherwise lack, and paying late most likely reflects having no money on the due date. The largest group, the stretched spreaders, fits neither story cleanly: they are not shut out of credit, but many already carry credit card debt and then add installment plans on top. This is where the behavioral account is most plausible, though these data can show consistency with it, not prove it.
+        </p>
+
+        <p>
+           The cushioned users are the puzzle. One in ten paid late despite having the cash, which liquidity cannot explain. Forgotten due dates, payments drawn from the wrong account, or simple inattention are more likely candidates. The Fed separately reports that 11 percent of BNPL users had a BNPL payment trigger an overdraft or insufficient-funds fee, a cost that falls on people with and without savings alike. 
+        </p>
+
+        <p>
+           The distinction matters more now that BNPL is entering credit records. In June 2025, FICO launched the first versions of its score to include BNPL loans. Once missed payments are reported, a late payment by a constrained borrower and one by a cushioned user will look identical, even though they point to different problems: affordability for the first, attention for the second. Policies aimed at one, such as affordability checks or payment reminders, will do little for the other. 
+        </p>
+
+        <p>
+          These results describe associations in a single cross-section of survey data, not causal effects. The three types are a statistical summary of how answers cluster, not literal categories of people, and late payment is self-reported. Linking respondents who also took the 2024 survey would allow a test of whether people who lose their savings cushion go on to start using BNPL, which is the next step for this project.  
+        </p>
+        </div>
+
+        <p class="project-subtitle">
+             Sources
+            </p>
+
+        <div class="project-description">
+                <p>
+                1. Board of Governors of the Federal Reserve System, 
+                  <a href="https://www.federalreserve.gov/publications/files/2025-report-economic-well-being-us-households-202605.pdf" target="_blank" rel="noopener noreferrer">
+                  May 2026, and the </a> <a href="https://www.federalreserve.gov/consumerscommunities/shed.htm" target="_blank" rel="noopener noreferrer">
+                  SHED public data </a>  All figures for BNPL users are my own survey-weighted estimates from the 2025 microdata unless noted.
+                  
+                2.  First Trust <a href="https://www.ftportfolios.com/Blogs/InvestBlog/2026/9/3/factoid---thursday,-september-3,-2026" target="_blank" rel="noopener noreferrer">
+                 summary of the Fed's 2025 BNPL.</a> (usage trend since 2021 and late-payment share).  
+                 
+                3.  Finextra, <a href="https://www.finextra.com/newsarticle/45699/doordash-and-klarna-let-users-eat-now-pay-later" target="_blank" rel="noopener noreferrer">
+                 DoorDash and Klarna let users eat now, pay later,</a> March 2025. 
+
+                4.  FICO, <a href="https://www.businesswire.com/news/home/20250623623014/en/FICO-Unveils-Groundbreaking-Credit-Scores-That-Incorporate-Buy-Now-Pay-Later-Data" target="_blank" rel="noopener noreferrer">
+                    launch of FICO Score 10 BNPL ,and 10 T BNPL,</a> June 23, 2025.
+                5.  Hayashi and Routh, <a href="https://www.kansascityfed.org/research/economic-review/financial-constraints-among-buy-now-pay-later-users/" target="_blank" rel="noopener noreferrer">
+                    Financial Constraints Among Buy Now, Pay Later Users,</a> Federal Reserve Bank of Kansas City Economic Review, 2025 (related work using the 2023 SHED).
+                </p>
+        </div>
+
+        
+            <p class="project-code">
+            Interested in the code?
+            <a href="https://github.com/zainabsafdary/bnpl-heterogeneity"
+            target="_blank"
+            rel="noopener noreferrer">
+            View it on GitHub →
+            </a>
+            </p>
+
+        </article>
+
+
+        <section class="contact">
+
+            <div class="contact-links">
+                <span>Contact me:</span>
+
+                <a href="mailto:safdaryzainab555@gmail.com">Email</a>
+
+                <a href="https://www.linkedin.com/in/zainab-safdary-405516337?utm_source=share_via&utm_content=profile&utm_medium=member_ios"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    LinkedIn
+                </a>
+            </div>
+
+            <img src="images/Contact.gif" alt="" class="contact-gif">
+
+        </section>
+
+    </main>
+
+    <script>
+    function openGraph() {
+        document.getElementById("graph-lightbox").style.display = "flex";
+    }
+
+    function closeGraph() {
+        document.getElementById("graph-lightbox").style.display = "none";
+    }
+</script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,11 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Python Package: poverty_analysis",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "poverty_analysis"
+        }
+    ]
+}
